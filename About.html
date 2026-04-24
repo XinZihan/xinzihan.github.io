@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <div class="page-transition"></div>
   <main class="page">
     <section class="hero">
       <h1>Zihan Xin</h1>
@@ -29,10 +30,25 @@
           <div class="intro-text">
           <h2>About Me</h2>
           <p>
-            A brief introduction, mention my experiences here
+           I am currently pursuing a Master of Library and Information Science at Western University, 
+           with a background in History and Journalism Studies from the University of Toronto.
           </p>
           <p>
-            Who I am, my hobby
+            My academic interests focus on journalism, media, digital culture, and public communication. 
+            I am particularly interested in how information shapes public understanding and how storytelling 
+            influences society and everyday life.
+          </p>
+          <h2>Experience</h2>
+          <p>
+            I have worked as a Marketing Intern at Okstin Education. As a Marketing Intern at Okstin Education, I supported website content updates, web design planning, and business outreach initiatives across the GTA. I also created blog articles, newsletters, and promotional content to support the company’s communication strategy.
+          </p>
+            <p>
+            Through both academic and professional experiences, I have developed strong skills in writing, research, digital content creation, and communication strategy.
+            </p>
+          <h2>Beyond Work</h2>
+          <p>
+            Outside of work and academics, I enjoy film photography, independent films, road trips, and long-form writing. I see writing not only as a professional skill, 
+            but also as a way to better understand people, culture, and the world around me.
           </p>
         <div class="about-info">
             <p><strong>Phone:</strong> +(1) 647-471-6426</p>
@@ -58,5 +74,29 @@
       </div>
     </section>
   </main>
+    <script>
+  const transition = document.querySelector(".page-transition");
+  
+  document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    const href = this.getAttribute("href");
+
+    if (
+      href &&
+      !href.startsWith("#") &&
+      !href.startsWith("http") &&
+      !this.hasAttribute("target")
+    ) {
+      e.preventDefault();
+
+      transition.classList.add("active");
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 280);
+    }
+  });
+});
+</script>
 </body>
 </html>
