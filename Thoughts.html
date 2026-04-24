@@ -9,6 +9,7 @@
 
 
 <body>
+  <div class="page-transition"></div>
   <main class="page">
     <section class="hero">
       <h1>Zihan Xin</h1>
@@ -29,11 +30,10 @@
           <div class="intro-text">
           <h2>Thoughts</h2>
           <p>
-            I'm a student / developer / creator. I enjoy building things and learning new ideas.
+            Beyond academic writing, I use this space to explore everyday issues through observation and storytelling. 
+            These pieces focus on lived experiences, social challenges, and the narratives behind public issues.
           </p>
-          <p>
-           a 
-          </p>
+
           <section class="writing-grid">
             <a class="writing-card" href="writing/ThoughtBidding to Survive.html">
              <h3>Bidding to Survive</h3>
@@ -67,5 +67,29 @@
       </div>
     </section>
   </main>
+    <script>
+  const transition = document.querySelector(".page-transition");
+  
+  document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    const href = this.getAttribute("href");
+
+    if (
+      href &&
+      !href.startsWith("#") &&
+      !href.startsWith("http") &&
+      !this.hasAttribute("target")
+    ) {
+      e.preventDefault();
+
+      transition.classList.add("active");
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 280);
+    }
+  });
+});
+</script>
 </body>
 </html>
