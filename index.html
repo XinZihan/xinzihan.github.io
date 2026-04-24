@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="page-transition"></div>
   <main class="page">
     <section class="hero">
       <div class="avatar">
-      <img src="images/zihan_selfy.jpg">
+      <img src="images/chatgpt selfie.png">
       </div>
       <h1>Zihan Xin</h1>
       <p>
@@ -57,5 +58,29 @@
       </div>
     </section>
   </main>
+  <script>
+  const transition = document.querySelector(".page-transition");
+
+  document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    const href = this.getAttribute("href");
+
+    if (
+      href &&
+      !href.startsWith("#") &&
+      !href.startsWith("http") &&
+      !this.hasAttribute("target")
+    ) {
+      e.preventDefault();
+
+      transition.classList.add("active");
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 280);
+    }
+  });
+});
+</script>
 </body>
 </html>
