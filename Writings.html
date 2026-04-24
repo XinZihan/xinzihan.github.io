@@ -9,6 +9,7 @@
 
 
 <body>
+  <div class="page-transition"></div>
   <main class="page">
     <section class="hero">
       <h1>Zihan Xin</h1>
@@ -29,10 +30,8 @@
           <div class="intro-text">
           <h2>Writing</h2>
           <p>
-            I'm a student / developer / creator. I enjoy building things and learning new ideas.
-          </p>
-          <p>
-            This website is a simple introduction to who I am and what I’m interested in.
+            This section collects selected essays, research papers, and reflections from my academic and personal work. 
+            I’m interested in media studies, international affairs, and the role of storytelling in shaping public understanding.
           </p>
           <section class="writing-grid">
             <a class="writing-card" href="writing/WritingFactories as an Isolated Society.html">
@@ -67,5 +66,29 @@
       </div>
     </section>
   </main>
+    <script>
+  const transition = document.querySelector(".page-transition");
+  
+  document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", function(e) {
+    const href = this.getAttribute("href");
+
+    if (
+      href &&
+      !href.startsWith("#") &&
+      !href.startsWith("http") &&
+      !this.hasAttribute("target")
+    ) {
+      e.preventDefault();
+
+      transition.classList.add("active");
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 280);
+    }
+  });
+});
+</script>
 </body>
 </html>
