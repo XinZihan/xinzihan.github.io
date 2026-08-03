@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Search Toolkit | Beyond the First Page</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f6f1e7;
+      background-image: url(images/Information\ background.jpg);
+      background-repeat: repeat;
+      background-position: center;
+      color: #1f1f1f;
+      font-family: Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #wrapper {
+      width: calc(100% - 40px);
+      max-width: 1100px;
+      margin: 20px auto;
+      overflow: hidden;
+      background-color: white;
+      border: 1px solid #d0d0d0;
+      border-radius: 20px;
+    }
+
+header {
+    position: relative;
+    background-position: left;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 2% 3% 1%;
+    background-color: white;
+}
+
+    header h1 {
+      margin: 0 0 2%;
+      font-family: 'Playwrite IE', cursive;
+      font-weight: 300;
+      font-size: 300%;
+    }
+.neon-sign {
+  font-size: 300%;
+  font-weight: bold;
+  text-shadow: 0 0 5px wheat, 0019px wheat, 0020px wheat, 0040px wheat;
+  animation: flicker 1.5s infinite;
+}
+@keyframes flicker {
+  0% {opacity: 1; text-shadow: 0 0 5px wheat, 0019px wheat, 0020px wheat, 0040px wheat;}
+  50% {opacity: 0.8; text-shadow: none;}
+  60% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+  70% {opacity: 0.5; text-shadow: none;}
+  80% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+  100% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+}
+
+
+
+nav {
+  background: #feeeea;
+  border-top: 1px solid #feeeea;
+  border-bottom: 1px solid feeeea;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  text-align: center;
+}
+
+nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #feeeea;
+  border: none;
+  text-align: center;
+  z-index: 10;
+}
+
+nav li:hover ul,
+nav li:focus-within ul {
+  display: block;
+}
+
+nav ul li a {
+  display: block;
+  text-align: center;
+  background-color: 3d3d3d;
+  color: black;
+  padding: 12px 20px; 
+
+  border-radius: 10px;
+  width: 180px;
+  transition: 0.2s;
+}
+
+nav > ul > li {
+  display: inline-block;
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 14px 18px;
+  text-decoration: none;
+}
+
+nav li:hover > a,
+nav li:focus-within > a,
+nav a[aria-current='page'] {
+  background-color: azure;
+}
+
+
+
+    .toolkit-row {
+      width: 100%;
+      background-image: url(images/beautiful-color-ui-gradients-backgrounds-roseanna.png);
+      background-color: whitesmoke;
+      background-repeat: repeat-y;
+      background-size: contain;
+    }
+
+    .toolkit-column {
+      width: 100%;
+      padding: 50px 80px 65px;
+    }
+
+    .toolkit-column > section {
+      width: 100%;
+      max-width: 880px;
+      margin: 0 auto 55px;
+    }
+
+    h2,
+    h3 {
+      font-family: "Quicksand", Georgia, serif;
+      color: #000;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(1.7rem, 3vw, 2.15rem);
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 18px;
+    }
+
+    .toolkit-hero {
+      padding: 42px 45px;
+      background: rgba(255, 255, 255, 0.68);
+      border-radius: 18px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .toolkit-hero p {
+      max-width: 720px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .toolkit-intro {
+      font-size: 1.1rem;
+    }
+
+    .highlight {
+      padding: 17px 20px;
+      background: #feeeea;
+      border-left: 5px solid #ef91a4;
+      border-radius: 8px;
+    }
+
+    .toolkit-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .toolkit-nav a {
+      padding: 9px 15px;
+      background: #feeeea;
+      border: 1px solid #f2cbc3;
+      border-radius: 20px;
+      font-family: "Quicksand", sans-serif;
+      transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .toolkit-nav a:hover,
+    .toolkit-nav a:focus {
+      background: azure;
+      transform: translateY(-2px);
+    }
+
+
+    .toolkit-step {
+      padding: 30px 34px;
+      background: rgba(255, 255, 255, 0.66);
+      border-left: 7px solid #ef91a4;
+      border-radius: 14px;
+      box-shadow: 0 7px 22px rgba(0, 0, 0, 0.06);
+    }
+
+    .step-number {
+      display: inline-block;
+      margin-bottom: 8px;
+      font-family: "Quicksand", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .tip-box {
+      margin: 20px 0;
+      padding: 18px 21px;
+      background: #feeeea;
+      border-radius: 10px;
+    }
+
+    .tip-box strong {
+      display: block;
+      margin-bottom: 5px;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    .search-example {
+      margin: 16px 0;
+      padding: 15px 18px;
+      overflow-wrap: anywhere;
+      background: white;
+      border: 1px solid #e1c8c1;
+      border-radius: 8px;
+      font-family: "Courier New", monospace;
+      font-size: 0.96rem;
+    }
+
+    code {
+      padding: 2px 5px;
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 4px;
+    }
+
+    .table-container {
+      width: 100%;
+      margin: 22px 0;
+      overflow-x: auto;
+    }
+
+    .search-table {
+      width: 100%;
+      min-width: 600px;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .search-table th,
+    .search-table td {
+      padding: 13px 15px;
+      border: 1px solid #d6bcb6;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .search-table th {
+      background: #feeeea;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 600;
+    }
+
+    .toolkit-checklist {
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .toolkit-checklist li {
+      position: relative;
+      margin-bottom: 12px;
+      padding: 13px 16px 13px 48px;
+      background: rgba(255, 255, 255, 0.68);
+      border-radius: 9px;
+    }
+
+    .toolkit-checklist li::before {
+      content: "✓";
+      position: absolute;
+      top: 11px;
+      left: 18px;
+      font-size: 1.15rem;
+      font-weight: bold;
+    }
+    .references {
+      font-size: 0.94rem;
+    }
+
+    .references p {
+      padding-left: 24px;
+      text-indent: -24px;
+    }
+
+    footer {
+      padding: 18px;
+      background: #feeeea;
+      color: black;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .back-to-top {
+      display: inline-block;
+      margin-left: 12px;
+      padding: 8px 13px;
+      border-radius: 18px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      transition: background-color 0.25s ease;
+    }
+
+    .back-to-top:hover,
+    .back-to-top:focus {
+      background-color: wheat;
+    }
+
+    @media (max-width: 850px) {
+      nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav a {
+        min-width: 0;
+      }
+
+      .toolkit-column {
+        padding: 38px 35px 50px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      #wrapper {
+        width: calc(100% - 18px);
+        margin: 9px auto;
+      }
+
+      header {
+        padding: 25px 15px;
+      }
+
+      nav ul {
+        grid-template-columns: 1fr;
+      }
+
+      .toolkit-column {
+        padding: 28px 18px 40px;
+      }
+
+      .toolkit-hero {
+        padding: 30px 21px;
+      }
+
+      .toolkit-step {
+        padding: 24px 21px;
+      }
+
+      footer small,
+      .back-to-top {
+        display: block;
+      }
+
+      .back-to-top {
+        width: max-content;
+        margin: 12px auto 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+.interactive-checklist {
+  max-width: 880px;
+  margin: 0 auto 55px;
+}
+
+.checklist-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin: 22px 0 14px;
+  font-family: "Quicksand", sans-serif;
+}
+
+#reset-checklist {
+  padding: 8px 15px;
+  background: #feeeea;
+  border: 1px solid #e5bdb4;
+  border-radius: 18px;
+  color: #222;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 0.25s;
+}
+
+#reset-checklist:hover,
+#reset-checklist:focus {
+  background: white;
+  transform: translateY(-1px);
+}
+
+.checklist-items {
+  display: grid;
+  gap: 12px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  min-height: 54px;
+  padding: 14px 18px;
+
+  background: rgba(255, 245, 242, 0.9);
+  border: 2px solid transparent;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.checklist-item:hover {
+  background: white;
+  transform: translateX(4px);
+}
+
+.checklist-item:focus-within {
+  border-color: #d8758b;
+  outline: 2px solid transparent;
+}
+
+.checklist-item input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+
+  accent-color: #d8758b;
+  cursor: pointer;
+}
+
+.checklist-item span {
+  line-height: 1.5;
+}
+
+.checklist-item.completed {
+  background: #f4f4f4;
+  border-color: #c6c6c6;
+}
+
+.checklist-item.completed span {
+  color: #666;
+  text-decoration: line-through;
+}
+
+.checklist-message {
+  min-height: 28px;
+  margin-top: 18px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .checklist-status {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .checklist-item {
+    align-items: flex-start;
+  }
+}
+
+
+  </style>
+</head>
+
+
+<body id="top">
+
+  <div id="wrapper">
+
+    <header>
+      <h1 class="neon-sign">Search Toolkit</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href='Index.html'>Home</a>
+        <li><a href='QuietPower.html'>Quiet Power</a>
+            <ul>
+            <li><a href='QuietPower.html'>Quiet Power</a></li>
+            <li><a href='Hidden Knowledge.html'>Hidden knowledge</a></li>
+
+            </ul>
+        </li>
+        <li>
+          <a href='Search Toolkit.html'>Search Toolkit</a>
+
+        </li>
+        <li>
+          <a href='Community Role.html'>Community Role</a>
+
+        </li>
+        <li>
+          <a href='Library Role.html'>Library Role</a>
+
+        </li>
+        <li>
+          <a href='Trends.html'>Trends</a>
+
+        </li>
+      </ul>
+    </nav>
+
+
+
+    <div class="toolkit-row">
+
+      <main class="toolkit-column">
+
+
+        <section class="toolkit-hero">
+
+          <p class="toolkit-intro">
+            Online search engines, databases, and social media platforms organize
+            information before users see it. Their rankings can be useful, but they
+            should not define the entire research process.
+          </p>
+
+          <p>
+            This toolkit offers a five-step method for reducing dependence on one
+            information system. 
+            </p>
+          <p>
+            💬There is also an interactive checklist provided at the bottome of this page.✔
+          </p>
+
+          <p class="highlight">
+            Remember, our goal is not to escape every algorithm. The goal is to recognize how
+            search systems shape visibility and to create more than one pathway to
+            knowledge.
+          </p>
+
+          <div class="toolkit-nav" aria-label="Toolkit sections">
+            <a href="#step1">Define the Need</a>
+            <a href="#step2">Expand the Language</a>
+            <a href="#step3">Search Across Systems</a>
+            <a href="#step4">Follow Community Pathways</a>
+            <a href="#step5">Compare and Reflect</a>
+          </div>
+
+        </section>
+
+
+        <section class="toolkit-step" id="step1">
+
+          <span class="step-number">Step 1</span>
+
+          <h2>Define the Information Need</h2>
+
+          <p>
+            Broad searches give a ranking system more control over the results.
+            You can begin by turning a general topic into a focused question.
+          </p>
+          <p>For example:</p>
+
+          <div class="tip-box">
+            <strong>Too broad</strong>
+            Information about newcomers
+          </div>
+
+          <div class="tip-box">
+            <strong>More focused</strong>
+            What employment services are available in Ontario for internationally
+            trained workers?
+          </div>
+
+          <p>
+            A focused question identifies the location, audience, and type of information
+            required. 
+          </p>
+
+          <p>
+            Before searching, think 💭, and ask yourself:
+          </p>
+
+          <ul>
+            <li>What decision am I trying to make?</li>
+            <li>Whose perspective do I need?</li>
+            <li>Does the information need to be current or historical?</li>
+            <li>Does the answer need to be local or community-specific?</li>
+          </ul>
+
+        </section>
+
+        <section class="toolkit-step" id="step2">
+
+          <span class="step-number">Step 2</span>
+
+          <h2>Expand Your Search Language</h2>
+
+           <p>
+            The words you choose can change what you find. A community may use different
+            language from a government agency, academic database, or library catalogue.
+            You may miss useful sources when you search with only one phrase.
+          </p>
+
+          <div class="table-container">
+
+            <table class="search-table">
+
+              <thead>
+                <tr>
+                  <th>Type of language</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Everyday language</td>
+                  <td>Help finding work</td>
+                </tr>
+
+                <tr>
+                  <td>Institutional language</td>
+                  <td>Employment services</td>
+                </tr>
+
+                <tr>
+                  <td>Policy language</td>
+                  <td>Labour-market integration</td>
+                </tr>
+
+                <tr>
+                  <td>Community language</td>
+                  <td>Newcomer employment support</td>
+                </tr>
+
+                <tr>
+                  <td>Related concept</td>
+                  <td>Foreign credential recognition</td>
+                </tr>
+              </tbody>
+
+            </table>
+
+          </div>
+    <p>
+      You could try several terms and compare the results. Older catalogue records may
+      require historical terminology. You may use an older term to retrieve information
+      without accepting or endorsing that language.
+    </p>
+
+    <div class="tip-box">
+      <strong>Create a search-term map</strong>
+      Before you begin a detailed search, you could list community-preferred terms,
+      institutional language, historical terms, related concepts, and alternative
+      spellings.
+    </div>
+        </section>
+
+  <section class="toolkit-step" id="step3">
+
+    <span class="step-number">Step 3</span>
+
+    <h2>Search Across Different Systems</h2>
+
+    <p>
+      You may receive a wider range of information when you move beyond one platform.
+      Different systems collect different materials and use different ranking rules.
+    </p>
+
+    <p>
+      You could compare a general search engine with a library catalogue, academic
+      database, community organization, local news source, or government website.
+    </p>
+    <p><em>For example,</em></p>
+
+    <div class="search-example">
+      "disability justice" housing Ontario
+    </div>
+
+    <div class="search-example">
+      site:org "newcomer mental health" Canada
+    </div>
+
+    <div class="search-example">
+      site:ca "Indigenous language revitalization"
+    </div>
+
+    <div class="search-example">
+      "trans health" "community organization" Toronto
+    </div>
+
+    <div class="table-container">
+
+      <table class="search-table">
+
+        <thead>
+          <tr>
+            <th>Tool</th>
+            <th>How you may use it</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Quotation marks</td>
+            <td>You may search for an exact phrase.</td>
+            <td>"disability justice"</td>
+          </tr>
+
+          <tr>
+            <td>site:</td>
+            <td>You may limit results to one website or domain.</td>
+            <td>site:org newcomer support</td>
+          </tr>
+
+          <tr>
+            <td>Minus sign</td>
+            <td>You may remove an unwanted term.</td>
+            <td>accessibility housing -hotel</td>
+          </tr>
+
+          <tr>
+            <td>Date filter</td>
+            <td>You may limit results to a selected period.</td>
+            <td>Past year or custom date range</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <p>
+      Search features may change over time. You can treat these examples as starting
+      points rather than fixed formulas.
+    </p>
+
+  </section>
+
+
+
+<section class="toolkit-step" id="step4">
+
+          <span class="step-number">Step 4</span>
+
+          <h2>Follow Community Pathways</h2>
+
+          <p>
+            Once you locate a useful community source, follow the relationships around
+            it instead of returning immediately to the main search engine.
+          </p>
+
+          <p>
+            Look for authors, partner organizations, recommended readings, archived 
+            materials, and cited reports. These
+            connections may lead to sources that are not highly ranked by commercial
+            systems.
+          </p>
+
+          <div class="tip-box">
+            <strong>Example pathway</strong>
+            Community organization → local report → author biography → partner archive
+            → additional community publication
+          </div>
+
+          <p>
+            Community-produced material should still be evaluated critically.
+            No publication or organization represents every member of a community.
+            Consider the source's purpose, audience, location, and limitations.
+          </p>
+
+          <p>
+            Greater visibility is also not always appropriate. Some knowledge may be
+            private or culturally restricted. An Ethical searching
+            requires attention to privacy and community control.
+          </p>
+
+        </section>
+
+       <section class="toolkit-step" id="step5">
+
+          <span class="step-number">Step 5</span>
+
+          <h2>Compare and Reflect</h2>
+
+          <p>
+            A critical search should compare more than one kind of authority. Try
+            placing an institutional source beside a community-produced source.
+            A scholarly or archival source can provide another perspective.
+          </p>
+
+          <div class="table-container">
+
+            <table class="search-table">
+
+              <thead>
+                <tr>
+                  <th>Source type</th>
+                  <th>Possible contribution</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Government or institutional source</td>
+                  <td>
+                    Official policies, definitions, eligibility requirements, and
+                    program information
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Community-produced source</td>
+                  <td>
+                    Local knowledge, lived experience, community language, and
+                    practical context
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Academic source</td>
+                  <td>
+                    Research evidence, theoretical context, and broader analysis
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Archive or historical collection</td>
+                  <td>
+                    Historical records, primary sources, and evidence of change
+                    over time
+                  </td>
+                </tr>
+              </tbody>
+
+            </table>
+
+          </div>
+
+          <p>
+            Authority depends on the question being asked. A government page may be
+            authoritative about the wording of a policy. A community organization may
+            better explain how the same policy affects people in practice.
+          </p>
+
+          <p>
+            Finish the search by asking what remains missing. Search results can reveal
+            useful information, but their absences are also meaningful.
+          </p>
+
+        </section>
+
+<section class="interactive-checklist">
+
+<h2>Before Finishing Your Research🤔</h2>
+
+  <p>Use this checklist before ending your search.</p>
+
+  <div class="checklist-status" aria-live="polite">
+    <button type="button" id="reset-checklist">
+      Reset
+    </button>
+  </div>
+
+  <div class="checklist-items">
+
+    <label class="checklist-item">
+      <input type="checkbox" name="search-checklist">
+      <span>I clearly defined my information need.</span>
+    </label>
+
+    <label class="checklist-item">
+      <input type="checkbox" name="search-checklist">
+      <span>I tried more than one search term.</span>
+    </label>
+
+    <label class="checklist-item">
+      <input type="checkbox" name="search-checklist">
+      <span>I searched more than one information system.</span>
+    </label>
+
+    <label class="checklist-item">
+      <input type="checkbox" name="search-checklist">
+      <span>I located at least one community-produced source.</span>
+    </label>
+
+    <label class="checklist-item">
+      <input type="checkbox" name="search-checklist">
+      <span>
+        I checked the source's creator, date, purpose, and intended audience.
+      </span>
+    </label>
+
+    <label class="checklist-item">
+      <input type="checkbox" name="search-checklist">
+      <span>I compared different kinds of authority.</span>
+    </label>
+
+    <label class="checklist-item">
+      <input type="checkbox" name="search-checklist">
+      <span>I considered which voices or languages may be missing.</span>
+    </label>
+
+    <label class="checklist-item">
+      <input type="checkbox" name="search-checklist">
+      <span>
+        I avoided collecting or sharing unnecessary personal information.
+      </span>
+    </label>
+
+  </div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const checkboxes = document.querySelectorAll(
+    'input[name="search-checklist"]'
+  );
+
+  const progressText = document.getElementById("checklist-progress");
+  const message = document.getElementById("checklist-message");
+  const resetButton = document.getElementById("reset-checklist");
+
+  const storageKey = "searchToolkitChecklist";
+
+  function saveChecklist() {
+    const savedValues = Array.from(checkboxes).map(
+      checkbox => checkbox.checked
+    );
+
+    localStorage.setItem(storageKey, JSON.stringify(savedValues));
+  }
+
+  function updateChecklist() {
+    let completed = 0;
+
+    checkboxes.forEach(checkbox => {
+      const item = checkbox.closest(".checklist-item");
+
+      if (checkbox.checked) {
+        completed++;
+        item.classList.add("completed");
+      } else {
+        item.classList.remove("completed");
+      }
+    });
+
+    progressText.textContent =
+      `${completed} of ${checkboxes.length} completed`;
+
+    if (completed === checkboxes.length) {
+      message.textContent =
+        "You are ready to evaluate your search beyond the first page.";
+    } else {
+      message.textContent = "";
+    }
+
+    saveChecklist();
+  }
+
+  function loadChecklist() {
+    const savedData = localStorage.getItem(storageKey);
+
+    if (!savedData) {
+      updateChecklist();
+      return;
+    }
+
+    try {
+      const savedValues = JSON.parse(savedData);
+
+      checkboxes.forEach((checkbox, index) => {
+        checkbox.checked = Boolean(savedValues[index]);
+      });
+    } catch (error) {
+      localStorage.removeItem(storageKey);
+    }
+
+    updateChecklist();
+  }
+
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", updateChecklist);
+  });
+
+  resetButton.addEventListener("click", () => {
+    checkboxes.forEach(checkbox => {
+      checkbox.checked = false;
+    });
+
+    localStorage.removeItem(storageKey);
+    updateChecklist();
+  });
+
+  loadChecklist();
+});
+</script>
+  <p class="checklist-message" id="checklist-message"></p>
+
+</section>
+
+
+
+          <h2>More importantly, critical Searching Is an Ongoing Practice</h2>
+  
+
+      </main>
+
+    </div>
+
+
+    <footer>
+
+      <small>
+        Beyond the First Page — LIS 9170 Final Project |
+        Zihan Xin | zxin28@uwo.ca
+      </small>
+
+      <a href="#top" class="back-to-top">
+        BACK TO TOP
+      </a>
+
+    </footer>
+
+  </div>
+
+</body>
+
+</html>

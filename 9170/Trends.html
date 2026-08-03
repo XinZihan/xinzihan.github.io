@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Trends | Beyond the First Page</title>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f6f1e7;
+      background-image: url(images/Information\ background.jpg);
+      background-repeat: repeat;
+      background-position: center;
+      color: #1f1f1f;
+      font-family: Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    #wrapper {
+      width: calc(100% - 40px);
+      max-width: 1100px;
+      margin: 20px auto;
+      overflow: hidden;
+      background-color: white;
+      border: 1px solid #d0d0d0;
+      border-radius: 20px;
+    }
+
+header {
+    position: relative;
+    background-position: left;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 2% 3% 1%;
+    background-color: white;
+}
+
+    header h1 {
+      margin: 0 0 2%;
+      font-family: 'Playwrite IE', cursive;
+      font-weight: 300;
+      font-size: 300%;
+    }
+.neon-sign {
+  font-size: 300%;
+  font-weight: bold;
+  text-shadow: 0 0 5px wheat, 0019px wheat, 0020px wheat, 0040px wheat;
+  animation: flicker 1.5s infinite;
+}
+@keyframes flicker {
+  0% {opacity: 1; text-shadow: 0 0 5px wheat, 0019px wheat, 0020px wheat, 0040px wheat;}
+  50% {opacity: 0.8; text-shadow: none;}
+  60% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+  70% {opacity: 0.5; text-shadow: none;}
+  80% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+  100% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+}
+
+
+
+nav {
+  background: #feeeea;
+  border-top: 1px solid #feeeea;
+  border-bottom: 1px solid feeeea;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  text-align: center;
+}
+
+nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #feeeea;
+  border: none;
+  text-align: center;
+  z-index: 10;
+}
+
+nav li:hover ul,
+nav li:focus-within ul {
+  display: block;
+}
+
+nav ul li a {
+  display: block;
+  text-align: center;
+  background-color: 3d3d3d;
+  color: black;
+  padding: 12px 20px; 
+
+  border-radius: 10px;
+  width: 180px;
+  transition: 0.2s;
+}
+
+nav > ul > li {
+  display: inline-block;
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 14px 18px;
+  text-decoration: none;
+}
+
+nav li:hover > a,
+nav li:focus-within > a,
+nav a[aria-current='page'] {
+  background-color: azure;
+}
+
+
+
+    .toolkit-row {
+      width: 100%;
+      background-image: url(images/beautiful-color-ui-gradients-backgrounds-roseanna.png);
+      background-color: whitesmoke;
+      background-repeat: repeat-y;
+      background-size: contain;
+    }
+
+    .toolkit-column {
+      width: 100%;
+      padding: 50px 80px 65px;
+    }
+
+    .toolkit-column > section {
+      width: 100%;
+      max-width: 880px;
+      margin: 0 auto 55px;
+    }
+
+    h2,
+    h3 {
+      font-family: "Quicksand", Georgia, serif;
+      color: #000;
+    }
+
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(1.7rem, 3vw, 2.15rem);
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 18px;
+    }
+
+    .toolkit-hero {
+      padding: 42px 45px;
+      background: rgba(255, 255, 255, 0.68);
+      border-radius: 18px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .toolkit-hero p {
+      max-width: 720px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .toolkit-intro {
+      font-size: 1.1rem;
+    }
+
+    .highlight {
+      padding: 17px 20px;
+      background: #feeeea;
+      border-left: 5px solid #ef91a4;
+      border-radius: 8px;
+    }
+
+    .toolkit-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .toolkit-nav a {
+      padding: 9px 15px;
+      background: #feeeea;
+      border: 1px solid #f2cbc3;
+      border-radius: 20px;
+      font-family: "Quicksand", sans-serif;
+      transition:
+        background-color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .toolkit-nav a:hover,
+    .toolkit-nav a:focus {
+      background: azure;
+      transform: translateY(-2px);
+    }
+
+
+    .toolkit-step {
+      padding: 30px 34px;
+      background: rgba(255, 255, 255, 0.66);
+      border-left: 7px solid #ef91a4;
+      border-radius: 14px;
+      box-shadow: 0 7px 22px rgba(0, 0, 0, 0.06);
+    }
+
+    .step-number {
+      display: inline-block;
+      margin-bottom: 8px;
+      font-family: "Quicksand", sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .tip-box {
+      margin: 20px 0;
+      padding: 18px 21px;
+      background: #feeeea;
+      border-radius: 10px;
+    }
+
+    .tip-box strong {
+      display: block;
+      margin-bottom: 5px;
+      font-family: "Quicksand", sans-serif;
+    }
+
+    .search-example {
+      margin: 16px 0;
+      padding: 15px 18px;
+      overflow-wrap: anywhere;
+      background: white;
+      border: 1px solid #e1c8c1;
+      border-radius: 8px;
+      font-family: "Courier New", monospace;
+      font-size: 0.96rem;
+    }
+
+    code {
+      padding: 2px 5px;
+      background: rgba(255, 255, 255, 0.75);
+      border-radius: 4px;
+    }
+
+    .table-container {
+      width: 100%;
+      margin: 22px 0;
+      overflow-x: auto;
+    }
+
+    .search-table {
+      width: 100%;
+      min-width: 600px;
+      border-collapse: collapse;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .search-table th,
+    .search-table td {
+      padding: 13px 15px;
+      border: 1px solid #d6bcb6;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .search-table th {
+      background: #feeeea;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 600;
+    }
+
+    .toolkit-checklist {
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .toolkit-checklist li {
+      position: relative;
+      margin-bottom: 12px;
+      padding: 13px 16px 13px 48px;
+      background: rgba(255, 255, 255, 0.68);
+      border-radius: 9px;
+    }
+
+    .toolkit-checklist li::before {
+      content: "✓";
+      position: absolute;
+      top: 11px;
+      left: 18px;
+      font-size: 1.15rem;
+      font-weight: bold;
+    }
+    .references {
+      font-size: 0.94rem;
+    }
+
+    .references p {
+      padding-left: 24px;
+      text-indent: -24px;
+    }
+
+    footer {
+      padding: 18px;
+      background: #feeeea;
+      color: black;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    .back-to-top {
+      display: inline-block;
+      margin-left: 12px;
+      padding: 8px 13px;
+      border-radius: 18px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      transition: background-color 0.25s ease;
+    }
+
+    .back-to-top:hover,
+    .back-to-top:focus {
+      background-color: wheat;
+    }
+
+    @media (max-width: 850px) {
+      nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav a {
+        min-width: 0;
+      }
+
+      .toolkit-column {
+        padding: 38px 35px 50px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      #wrapper {
+        width: calc(100% - 18px);
+        margin: 9px auto;
+      }
+
+      header {
+        padding: 25px 15px;
+      }
+
+      nav ul {
+        grid-template-columns: 1fr;
+      }
+
+      .toolkit-column {
+        padding: 28px 18px 40px;
+      }
+
+      .toolkit-hero {
+        padding: 30px 21px;
+      }
+
+      .toolkit-step {
+        padding: 24px 21px;
+      }
+
+      footer small,
+      .back-to-top {
+        display: block;
+      }
+
+      .back-to-top {
+        width: max-content;
+        margin: 12px auto 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+.interactive-checklist {
+  max-width: 880px;
+  margin: 0 auto 55px;
+}
+
+.checklist-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin: 22px 0 14px;
+  font-family: "Quicksand", sans-serif;
+}
+
+#reset-checklist {
+  padding: 8px 15px;
+  background: #feeeea;
+  border: 1px solid #e5bdb4;
+  border-radius: 18px;
+  color: #222;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 0.25s;
+}
+
+#reset-checklist:hover,
+#reset-checklist:focus {
+  background: white;
+  transform: translateY(-1px);
+}
+
+.checklist-items {
+  display: grid;
+  gap: 12px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  min-height: 54px;
+  padding: 14px 18px;
+
+  background: rgba(255, 245, 242, 0.9);
+  border: 2px solid transparent;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.checklist-item:hover {
+  background: white;
+  transform: translateX(4px);
+}
+
+.checklist-item:focus-within {
+  border-color: #d8758b;
+  outline: 2px solid transparent;
+}
+
+.checklist-item input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+
+  accent-color: #d8758b;
+  cursor: pointer;
+}
+
+.checklist-item span {
+  line-height: 1.5;
+}
+
+.checklist-item.completed {
+  background: #f4f4f4;
+  border-color: #c6c6c6;
+}
+
+.checklist-item.completed span {
+  color: #666;
+  text-decoration: line-through;
+}
+
+.checklist-message {
+  min-height: 28px;
+  margin-top: 18px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .checklist-status {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .checklist-item {
+    align-items: flex-start;
+  }
+}
+
+.discussion-link {
+  display: inline-block;
+  position: relative;
+  padding: 5px 9px;
+  color: #222;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  border-radius: 8px;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.discussion-link::after {
+  content: " ↗";
+  display: inline-block;
+  font-size: 0.85em;
+  transition: transform 0.25s ease;
+}
+
+.discussion-link:hover,
+.discussion-link:focus {
+  color: #000;
+  background-color: #feeeea;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.discussion-link:hover::after,
+.discussion-link:focus::after {
+  transform: translate(2px, -2px);
+}
+
+.discussion-link:focus-visible {
+  outline: 3px solid #d8758b;
+  outline-offset: 3px;
+}
+.trend-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.trend-card {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid #efd5cf;
+  border-top: 6px solid #ef91a4;
+  border-radius: 14px;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.trend-card:hover {
+  background: white;
+  box-shadow: 0 11px 28px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.trend-card h3 {
+  margin: 0 0 18px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #feeeea;
+  font-size: 1.25rem;
+}
+
+.trend-topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.trend-topic-list li {
+  padding: 8px 12px;
+  background: #feeeea;
+  border: 1px solid #f1d0c9;
+  border-radius: 20px;
+  font-size: 0.92rem;
+  line-height: 1.35;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.trend-topic-list li:hover {
+  background: azure;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .trend-grid {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+</head>
+
+<body id="top">
+
+  <div id="wrapper">
+
+    <header>
+      <h1 class="neon-sign">Trends</h1>
+    </header>
+
+
+    <nav aria-label="Main navigation">
+      <ul>
+
+        <li>
+          <a href="Index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="QuietPower.html">Quiet Power</a>
+
+          <ul>
+            <li>
+              <a href="QuietPower.html">Quiet Power</a>
+            </li>
+
+            <li>
+              <a href="Hidden Knowledge.html">Hidden Knowledge</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="Search Toolkit.html">Search Toolkit</a>
+        </li>
+
+        <li>
+          <a href="Community Role.html">Community Role</a>
+        </li>
+
+        <li>
+          <a href="Library Role.html">Library Role</a>
+        </li>
+
+        <li>
+          <a href="Trends.html" aria-current="page">Trends</a>
+        </li>
+
+      </ul>
+    </nav>
+
+
+    <div class="toolkit-row">
+
+      <main class="toolkit-column">
+
+        <section class="toolkit-hero">
+
+          <h2>Finding Community Discussions and Emerging Topics</h2>
+
+          <p>
+            This page has two parts. The first introduces public discussion spaces
+            related to marginalized communities. The second presents a sample trend
+            identified through visible online discussions.
+          </p>
+
+          <p class="highlight">
+            Remember that online discussions do not represent every member of a
+            community. When searching for information, we should use online discussion 
+            resources as starting points, we should not treat
+            them as complete evidence of community opinion.
+          </p>
+
+        </section>
+
+
+        <section class="toolkit-step" id="discussion-places">
+
+
+          <h2>Available Community Discussion Places</h2>
+
+          <p>
+            We can visit public forums to learn how people describe their own
+            questions and experiences. These spaces can help you identify current
+            language, community resources, and concerns that may be difficult to
+            locate through formal sources.
+          </p>
+
+          <div class="table-container">
+
+            <table class="search-table">
+
+              <thead>
+                <tr>
+                  <th>Community area</th>
+                  <th>Discussion place</th>
+                  <th>What you may find</th>
+                </tr>
+              </thead>
+
+              <tbody>
+
+                <tr>
+                  <td>Indigenous communities</td>
+
+                  <td>
+                    <a
+                      class="discussion-link"
+                      href="https://www.reddit.com/r/IndigenousCanada/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      r/IndigenousCanada
+                    </a>
+                  </td>
+
+                  <td>
+                    Discussions about Indigenous culture, politics,
+                    community issues, history, and current events.
+                  </td>
+                </tr>
+
+
+
+  <tr>
+    <td>Overseas Chinese communities</td>
+
+    <td>
+      <a
+        class="discussion-link"
+        href="https://bbs.wenxuecity.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Wenxuecity Forums 文学城
+      </a>
+    </td>
+
+    <td>
+      Chinese-language discussions about immigration,
+      family life, education, health, employment, and life in Canada.
+    </td>
+  </tr>
+
+
+
+  <tr>
+    <td>Newcomers to Canada</td>
+
+    <td>
+      <a
+        class="discussion-link"
+        href="https://www.facebook.com/groups/211438195732113/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Newcomers to Canada — Facebook
+      </a>
+    </td>
+
+    <td>
+      Questions about settling in Canada, services,
+      employment, housing, and daily life.
+    </td>
+  </tr>
+  <tr>
+    <td>LGBTQ+ communities in Toronto</td>
+
+    <td>
+      <a
+        class="discussion-link"
+        href="https://www.facebook.com/groups/LGBTQ.Toronto/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Queer Toronto — Facebook
+      </a>
+    </td>
+
+    <td>
+      Local LGBTQ+ events, community news, resources,
+      projects, and personal discussions.
+    </td>
+  </tr>
+
+                <tr>
+                  <td>Transgender communities</td>
+
+                  <td>
+                    <a
+                      class="discussion-link"  
+                      href="https://www.reddit.com/r/asktransgender/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      r/asktransgender
+                    </a>
+                  </td>
+
+                  <td>
+                    Questions and peer discussions about transgender
+                    identity, healthcare, transition, family, and daily life.
+                  </td>
+                </tr>
+
+
+                <tr>
+                  <td>Older adults</td>
+
+                  <td>
+                    <a
+                      class="discussion-link"
+                      href="https://community.aarp.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      AARP Online Community
+                    </a>
+                  </td>
+
+                  <td>
+                    Conversations about caregiving, health,
+                    technology, retirement, relationships, and aging.
+                  </td>
+                </tr>
+
+
+                <tr>
+                  <td>Older adult perspectives</td>
+
+                  <td>
+                    <a
+                      class="discussion-link"
+                      href="https://www.reddit.com/r/AskOldPeople/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      r/AskOldPeople
+                    </a>
+                  </td>
+
+                  <td>
+                    Questions answered by older adults about social
+                    change, relationships, work, and life experience.
+                  </td>
+                </tr>
+
+
+                <tr>
+                  <td>Disability communities</td>
+
+                  <td>
+                    <a
+                      class="discussion-link"
+                      href="https://www.reddit.com/r/disability/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      r/disability
+                    </a>
+                  </td>
+
+                  <td>
+                    Discussions about accessibility, benefits,
+                    healthcare, identity, employment, and independent living.
+                  </td>
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+
+
+          <div class="tip-box">
+
+            <strong>Before you participate</strong>
+
+            We should always read the rules of each community, respect the community culture. And friendly remind,
+            some forums may restrict promotional posts, requests for interviews, or direct
+            messages to community members.
+
+          </div>
+
+
+          <p class="highlight">
+            A highly active forum is not automatically more representative or more
+            reliable than a smaller community space.
+          </p>
+
+        </section>
+
+<section class="toolkit-step" id="trend-snapshot">
+
+  <span class="step-number">Category 2</span>
+
+  <h2>Trending Topics in This Sample</h2>
+
+  <p class="highlight">
+    This section was designed to display trending topics and news collected by an
+    automated web crawler. Because many platforms currently restrict the use of
+    their API for information collection, the trends below were collected manually.
+  </p>
+
+
+  <div class="trend-grid">
+
+    <article class="trend-card">
+
+      <h3>Overseas Chinese Communities</h3>
+
+      <ul class="trend-topic-list">
+        <li>University Application Planning</li>
+        <li>AI and Future Careers</li>
+        <li>Retirement and Financial Security</li>
+        <li>Family Caregiving</li>
+        <li>TN and H-1B Work Status</li>
+        <li>Canadian Immigration and Settlement</li>
+      </ul>
+
+    </article>
+
+
+    <article class="trend-card">
+
+      <h3>Black Canadian Communities</h3>
+
+      <ul class="trend-topic-list">
+        <li>Emancipation Day</li>
+        <li>Caribana 2026</li>
+        <li>Black History and Cultural Memory</li>
+        <li>Urban Planning and Black Communities</li>
+        <li>Black Youth Safety</li>
+        <li>Institutional Accountability</li>
+      </ul>
+
+    </article>
+
+
+    <article class="trend-card">
+
+      <h3>Newcomer Communities</h3>
+
+      <ul class="trend-topic-list">
+        <li>Affordable Housing</li>
+        <li>Newcomer Employment</li>
+        <li>Digital Workplace Skills</li>
+        <li>International Students and Permanent Residence</li>
+        <li>Immigration Fraud</li>
+        <li>Canada–Philippines Relations</li>
+      </ul>
+
+    </article>
+
+
+    <article class="trend-card">
+
+      <h3>LGBTQ+ Communities</h3>
+
+      <ul class="trend-topic-list">
+        <li>Toronto Pride 2026</li>
+        <li>LGBTQ+ Storytelling</li>
+        <li>Mental-Health Support</li>
+        <li>Queer-Friendly Housing</li>
+        <li>Community Events</li>
+        <li>Local LGBTQ+ News</li>
+      </ul>
+
+    </article>
+
+
+    <article class="trend-card">
+
+      <h3>Disability Communities</h3>
+
+      <ul class="trend-topic-list">
+        <li>Canada Disability Benefit</li>
+        <li>Disability Benefit Eligibility</li>
+        <li>Accessible Housing</li>
+        <li>Accessible Transportation</li>
+        <li>Income Security</li>
+        <li>Disability Rights and Representation</li>
+      </ul>
+
+    </article>
+
+
+    <article class="trend-card">
+
+      <h3>Older Adults</h3>
+
+      <ul class="trend-topic-list">
+        <li>Social Security and Medicare</li>
+        <li>The Promise Act</li>
+        <li>Retirement Application Delays</li>
+        <li>Medicare Plan Changes</li>
+        <li>Cost-of-Living Adjustments</li>
+        <li>Retirement Financial Security</li>
+      </ul>
+
+    </article>
+
+  </div>
+
+</section>
+
+      </main>
+
+    </div>
+
+
+    <footer>
+
+      <small>
+        Beyond the First Page — LIS 9170 Final Project |
+        Zihan Xin | zxin28@uwo.ca
+      </small>
+
+      <a href="#top" class="back-to-top">
+        BACK TO TOP
+      </a>
+
+    </footer>
+
+  </div>
+
+</body>
