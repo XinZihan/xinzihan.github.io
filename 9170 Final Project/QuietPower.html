@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Quiet Power</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f1e7;
+  background-image: url(images/Information\ background.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto;
+  color: #1f1f1f;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  border: #d8c3a5;
+  border-radius: 5px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#wrapper {
+  width: 1100px;
+  margin: 20px auto;
+  background-color: white;
+  border: 1px solid #d0d0d0;
+  border-radius: 20px 20px 20px 20px;
+}
+
+header {
+    position: relative;
+    background-position: left;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 2% 3% 1%;
+    background-color: white;
+}
+
+header:hover {
+  color: orange;
+  font-weight: bold;
+  transition: 0.7s;
+  background-image: url(images/shining\ maple\ logo.png);
+}
+
+.neon-sign {
+  font-size: 300%;
+  font-weight: bold;
+  text-shadow: 0 0 5px wheat, 0019px wheat, 0020px wheat, 0040px wheat;
+  animation: flicker 1.5s infinite;
+}
+@keyframes flicker {
+  0% {opacity: 1; text-shadow: 0 0 5px wheat, 0019px wheat, 0020px wheat, 0040px wheat;}
+  50% {opacity: 0.8; text-shadow: none;}
+  60% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+  70% {opacity: 0.5; text-shadow: none;}
+  80% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+  100% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+}
+
+
+.logo-hover {
+  
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 120px;
+  cursor: pointer;
+}
+
+header h1 {
+  margin: 0 0 2%;
+  font-family: 'Playwrite IE', cursive;
+  font-weight: 300;
+  font-size: 300%;
+}
+
+header p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+nav {
+  background: #feeeea;
+  border-top: 1px solid #feeeea;
+  border-bottom: 1px solid feeeea;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  text-align: center;
+}
+
+nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #feeeea;
+  border: none;
+  text-align: center;
+  z-index: 10;
+}
+
+nav li:hover ul,
+nav li:focus-within ul {
+  display: block;
+}
+
+nav ul li a {
+  display: block;
+  text-align: center;
+  background-color: 3d3d3d;
+  color: black;
+  padding: 12px 20px; 
+
+  border-radius: 10px;
+  width: 180px;
+  transition: 0.2s;
+}
+
+nav > ul > li {
+  display: inline-block;
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 14px 18px;
+  text-decoration: none;
+}
+
+nav li:hover > a,
+nav li:focus-within > a,
+nav a[aria-current='page'] {
+  background-color: azure;
+}
+
+
+#content {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.content-row {
+  display: flex;
+  gap: 0px;
+  align-items: stretch;
+  background-color: whitesmoke;
+}
+
+.left-column {
+  width: 800px;
+  padding-left: 100px;
+  padding-right: 30px;
+  background-image: url(images/beautiful-color-ui-gradients-backgrounds-roseanna.png);
+  background-repeat: repeat-y ;
+  background-size: contain;
+}
+
+.right-column{
+  width: 300px;
+  background: #feeeea;
+  padding: 30px 28px;
+  box-sizing: border-box;
+  border-left: 5px solid #feeeea;
+  border-radius: 0 0 14px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.right-column .links li a {
+  display: inline-block;
+  padding: 4px 6px;
+  transition: 0.3s;
+}
+
+.right-column .links li a:hover {
+  background-color: #dcdcdc;
+  border-radius: 5px;
+  padding-left: 10px;
+  text-decoration: underline;
+}
+
+aside,
+main {
+  display: table-cell;
+  vertical-align: top;
+}
+
+aside {
+  width: 170px;
+  background: #c9c9c9;
+  padding: 26px 18px;
+}
+
+
+main {
+  width: 660px;
+  padding: 28px 40px 34px;
+  background: #efefef;
+}
+
+h2,
+h3 {
+  font-family: 'Quicksand', Georgia, serif;
+  font-weight: 500;
+  color: #000;
+}
+
+main h2 {
+  font-family: 'Quicksand';
+  margin-top: 4px;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+main h3 {
+  font-size: 1.6rem;
+  margin-top: 28px;
+}
+
+aside h3 {
+  font-size: 1.1rem;
+  margin: 6px 0 12px;
+}
+
+ul.links {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+ul.links li {
+  margin-bottom: 10px;
+}
+
+ul.links li a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul.links li a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.img-box {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 300px;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  display: block;
+  position: relative;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 7%;
+}
+
+footer {
+  background: #feeeea;
+  color: black; 
+  text-align: center;
+  padding: 15px;
+  font-size: 0.95rem;
+  border-radius: 0 0 20px 20px;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16/9;
+}
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.back-to-top {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: small;
+}
+
+.back-to-top:hover {
+  background-color: wheat;
+}
+
+ .hover-text {
+            color: black;
+            padding: 0px;
+            font-size: 18px;
+            font-family: 'Quicksand';
+            transition: background-color 0.3s ease; 
+        }
+
+        .hover-text:hover {
+            background-color: whitesmoke;
+            border-radius: 15%;
+            color: #000000;      
+        }
+  </style>
+</head>
+
+
+<body id="top">
+  <div id='wrapper'>
+    <header>
+      <div class="logo-hover"></div>
+      <h1 class="neon-sign">Quiet Power</h1>
+    </header>
+    <div class= 'hero-image'></div>
+
+    <nav>
+      <ul>
+        <li><a href='Index.html'>Home</a>
+        <li><a href='QuietPower.html'>Quiet Power</a>
+            <ul>
+            <li><a href='QuietPower.html'>Quiet Power</a></li>
+            <li><a href='Hidden Knowledge.html'>Hidden knowledge</a></li>
+
+            </ul>
+        </li>
+        <li>
+          <a href='Search Toolkit.html'>Search Toolkit</a>
+
+        </li>
+        <li>
+          <a href='Community Role.html'>Community Role</a>
+
+        </li>
+        <li>
+          <a href='Library Role.html'>Library Role</a>
+
+        </li>
+        <li>
+          <a href='Trends.html'>Trends</a>
+
+        </li>
+      </ul>
+    </nav>
+
+
+    <div class="content-row">
+      <div class="left-column">
+      <h2>Quiet Power in Library Systems</h2>
+
+     <p>
+        Libraries organize knowledge through collection decisions, classification, 
+        subject headings, and metadata. These systems make discovery possible, but 
+        they also shape which materials users are likely to find.
+    </p>
+
+    <p class="highlight">
+        A library does not need to remove a resource to limit its visibility. Material 
+        may be present but poorly described, placed in an unexpected category, or 
+        indexed through language that users do not recognize.
+    </p>
+    <div class="img-box">
+      <img src="images/power of books.webp" alt="image of books poster">
+      </div>
+    <details class="more-reading">
+    <summary><em>Click to read more about classification bias</em></summary>
+    <p>
+        Howard and Knowlton (2018) found that Library of Congress systems used for 
+        African American Studies and LGBTQIA Studies can disperse related materials 
+        across categories or describe them through outdated language. Browsing can 
+        therefore reproduce assumptions built into the classification structure.
+    </p>
+        <p>
+        Drabinski (2013) argues that classification systems are not neutral containers. 
+        Their categories reflect the historical conditions and institutional values in 
+        which they were created. As language changes, catalogue terms may no longer 
+        reflect how communities describe themselves.
+    </p>
+
+    <p>
+        Lo’s (2019) study of the Library of Congress heading “Illegal Aliens” shows how 
+        routine cataloguing language can carry political meaning. Users who reject or 
+        do not know an official term may still need to use it because relevant records 
+        were created under that heading.
+    </p>
+</details>
+
+
+       <section>
+        <h2>Quiet Power and Hidden Knowledge</h2>
+
+        <p>
+            Search systems do more than find information. They decide what appears first, 
+            which language is recognized, and which sources receive attention. This influence 
+            is often difficult to see, so this project describes it as <strong>quiet power</strong>.
+        </p>
+
+        <p class="highlight">
+            Information does not need to be removed to become invisible. It can be poorly 
+            described, ranked below popular sources, or left outside the system entirely.
+        </p>
+        <p>
+            Libraries organize knowledge through collections, classifications, subject headings, 
+            and metadata. These tools make discovery possible, but they also reflect historical 
+            and institutional values.
+        </p>
+    </section>
+
+    <section>
+        <h2>How Algorithms Shape Visibility🧐</h2>
+
+        <p>
+            Search engines and social media platforms rank information through automated systems. 
+            Their results may be influenced by popularity, engagement, advertising, and previous 
+            user behaviour.
+        </p>
+
+        <p>
+            In a study, Noble (2018) demonstrates that search results can reproduce existing racism and sexism. 
+            The first page is therefore not a complete view of available knowledge. It is a 
+            constructed selection shaped by social and commercial priorities.
+        </p>
+    </section>
+
+    <section>
+        <h2>How Knowledge Becomes Hidden</h2>
+
+        <p>
+            Marginalized knowledge may be difficult to find because it has not been collected, 
+            digitized, or preserved. Small community organizations may also have fewer resources 
+            to publish and promote their work.
+        </p>
+
+        <p>
+            Information can also be hidden by language. A community may use different terms from 
+            those used by libraries, governments, or databases. Relevant sources may exist, but 
+            users may not know the official or historical terms required to locate them.
+        </p>
+
+        <p>
+            Popularity-based ranking creates another barrier. Large institutions often appear 
+            before local organizations, even when community sources provide more relevant knowledge.
+        </p>
+    </section>
+
+    <section>
+        <h2>Hidden Does Not Mean Absent</h2>
+
+        <p>
+            Marginalized communities are not without knowledge. Their knowledge may exist in local 
+            media, community archives, newsletters, oral histories, or independent organizations.
+        </p>
+
+        <p>
+            Caswell et al. (2017) explain that community archives can support 
+            <em>representational belonging</em>. They allow communities to preserve their own 
+            histories instead of depending only on outside institutions.
+        </p>
+
+        <p class="highlight">
+            The problem is often not the absence of knowledge, but the failure of dominant systems 
+            to recognize and prioritize it.
+        </p>
+
+        <strong><em>Why This Matters</em></strong>
+
+        <p>
+            The digital divide is not only about internet access or technical skills. It is also 
+            about whether users can reach information that reflects their lives and communities.
+        </p>
+
+        <p>
+            Libraries cannot remove every form of algorithmic influence. They can teach users to 
+            question rankings, search with different terms, compare platforms, and locate 
+            community-produced sources.
+        </p>
+    </section>
+    
+    <h2>How Do We Respond to It?</h2>
+
+    <p>
+        We cannot completely remove algorithms or classification systems from information 
+        discovery. We can, however, reduce our dependence on a single system and make its 
+        influence more visible.
+    </p>
+
+    <ol class="response-list">
+        <li>
+            <h3>Compare Different Information Systems</h3>
+
+            <p>
+                Compare results across search engines, library catalogues, databases, and 
+                community websites. Visit our 
+                <a href="Search Toolkit.html">
+                    <span class="hover-text">Search Toolkit</span>
+                </a>
+                for practical strategies.
+            </p>
+        </li>
+
+        <li>
+            <h3>Change the Language of the Search</h3>
+
+            <p>
+                Try community-preferred terms alongside institutional or historical language. 
+                Different search terms can reveal sources that one system may overlook.
+            </p>
+        </li>
+
+        <li>
+            <h3>Include Community-Produced Sources</h3>
+
+            <p>
+                Read community sources alongside government, academic, and mainstream 
+                materials. Comparing these perspectives helps reveal which voices are missing.
+            </p>
+        </li>
+    </ol>
+    
+    <section>
+      <h3>Think Beyond the First Page</h3>
+      <ol class="response-list">
+        <li> <p>
+            Who created the information system you are using?
+        </p> </li>
+
+        <li><p>
+            Why do some sources appear before others?
+        </p></li>
+
+        <li><p>
+            Are you finding information produced by a community, or only information written 
+            about that community?
+        </p></li>
+
+        <li><p>
+            What knowledge may remain outside the system?
+        </p></li>
+        </ol> 
+    </section>
+    <p class="highlight">
+        The goal is not to find a perfectly neutral system. It is to search critically, 
+        follow multiple pathways, and question why some knowledge is easier to find than others.
+    </p>
+
+
+
+    </div>
+
+<div class="right-column">
+
+    <h2>Recommended Reading</h2>
+
+    <ul class="links">
+        <li>
+            <a href="https://nyupress.org/9781479837243/algorithms-of-oppression/"
+               target="_blank"
+               rel="noopener noreferrer">
+               Algorithms of Oppression<br>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://digitalcommons.liu.edu/cgi/viewcontent.cgi?article=1007&amp;context=brooklyn_libfacpubs"
+               target="_blank"
+               rel="noopener noreferrer">
+                Queering the Catalog<br></a>
+        </li>
+
+        <li>
+            <a href="https://escholarship.org/uc/item/1h54v9m9"
+               target="_blank"
+               rel="noopener noreferrer">
+                To Be Able to Imagine Otherwise<br>
+            </a>
+        </li>
+    </ul>
+
+    <h2>Recommended Videos</h2>
+
+    <ul class="links">
+        <li>
+            <a href="https://www.youtube.com/watch?v=UXuJ8yQf6dI"
+               target="_blank"
+               rel="noopener noreferrer">
+                How Biased Are Our Algorithms?<br>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.youtube.com/watch?v=k88z3is1Jio"
+               target="_blank"
+               rel="noopener noreferrer">
+               Improving Access to Indigenous Collections<br>
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.youtube.com/watch?v=ILhyNPm5Xb4"
+               target="_blank"
+               rel="noopener noreferrer">
+               Reparative Archival Description<br>
+            </a>
+        </li>
+    </ul>
+
+</div>
+    </div>
+
+    <footer>
+      <small>Beyond the First Page - 9170 Final Project | Zihan Xin | zxin28@uwo.ca </small>
+      <a href="#top" class="back-to-top">BACK TO TOP</a>
+
+    </footer>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>

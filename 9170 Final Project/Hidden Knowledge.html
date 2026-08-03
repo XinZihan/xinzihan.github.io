@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Quiet Power</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f1e7;
+  background-image: url(images/Information\ background.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto;
+  color: #1f1f1f;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  border: #d8c3a5;
+  border-radius: 5px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#wrapper {
+  width: 1100px;
+  margin: 20px auto;
+  background-color: white;
+  border: 1px solid #d0d0d0;
+  border-radius: 20px 20px 20px 20px;
+}
+
+header {
+    position: relative;
+    background-image: url(images/maple-fork-logo-design-canadian-restaurant-logo-red-maple-leaf-with-fork-and-spon-free-vector.jpg);
+    background-position: left;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 2% 3% 1%;
+    background-color: white;
+}
+
+header:hover {
+  color: orange;
+  font-weight: bold;
+  transition: 0.7s;
+  background-image: url(images/shining\ maple\ logo.png);
+}
+
+.neon-sign {
+  font-size: 300%;
+  font-weight: bold;
+  text-shadow: 0 0 5px wheat, 0019px wheat, 0020px wheat, 0040px wheat;
+  animation: flicker 1.5s infinite;
+}
+@keyframes flicker {
+  0% {opacity: 1; text-shadow: 0 0 5px wheat, 0019px wheat, 0020px wheat, 0040px wheat;}
+  50% {opacity: 0.8; text-shadow: none;}
+  60% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+  70% {opacity: 0.5; text-shadow: none;}
+  80% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+  100% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+}
+
+
+.logo-hover {
+  
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 120px;
+  cursor: pointer;
+}
+
+header h1 {
+  margin: 0 0 2%;
+  font-family: 'Playwrite IE', cursive;
+  font-weight: 300;
+  font-size: 300%;
+}
+
+header p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+nav {
+  background: #feeeea;
+  border-top: 1px solid #feeeea;
+  border-bottom: 1px solid feeeea;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  text-align: center;
+}
+
+nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #feeeea;
+  border: none;
+  text-align: center;
+  z-index: 10;
+}
+
+nav li:hover ul,
+nav li:focus-within ul {
+  display: block;
+}
+
+nav ul li a {
+  display: block;
+  text-align: center;
+  background-color: 3d3d3d;
+  color: black;
+  padding: 12px 20px; 
+
+  border-radius: 10px;
+  width: 180px;
+  transition: 0.2s;
+}
+
+nav > ul > li {
+  display: inline-block;
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 14px 18px;
+  text-decoration: none;
+}
+
+nav li:hover > a,
+nav li:focus-within > a,
+nav a[aria-current='page'] {
+  background-color: azure;
+}
+
+
+#content {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.content-row {
+  display: flex;
+  gap: 0px;
+  align-items: stretch;
+  background-color: whitesmoke;
+}
+
+.left-column {
+  width: 800px;
+  padding-left: 100px;
+  padding-right: 30px;
+  background-image: url(images/beautiful-color-ui-gradients-backgrounds-roseanna.png);
+  background-repeat: repeat-y ;
+  background-size: contain;
+}
+
+.right-column{
+  width: 300px;
+  background: #feeeea;
+  padding: 30px 28px;
+  box-sizing: border-box;
+  border-left: 5px solid #feeeea;
+  border-radius: 0 0 14px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.right-column .links li a {
+  display: inline-block;
+  padding: 4px 6px;
+  transition: 0.3s;
+}
+
+.right-column .links li a:hover {
+  background-color: #dcdcdc;
+  border-radius: 5px;
+  padding-left: 10px;
+  text-decoration: underline;
+}
+
+aside,
+main {
+  display: table-cell;
+  vertical-align: top;
+}
+
+aside {
+  width: 170px;
+  background: #c9c9c9;
+  padding: 26px 18px;
+}
+
+
+main {
+  width: 660px;
+  padding: 28px 40px 34px;
+  background: #efefef;
+}
+
+h2,
+h3 {
+  font-family: 'Quicksand', Georgia, serif;
+  font-weight: 500;
+  color: #000;
+}
+
+main h2 {
+  font-family: 'Quicksand';
+  margin-top: 4px;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+main h3 {
+  font-size: 1.6rem;
+  margin-top: 28px;
+}
+
+aside h3 {
+  font-size: 1.1rem;
+  margin: 6px 0 12px;
+}
+
+ul.links {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+ul.links li {
+  margin-bottom: 10px;
+}
+
+ul.links li a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul.links li a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.img-box {
+  width: 100%;
+  max-width: 360px;
+  height: 100%;
+  max-height: 180px;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  display: block;
+  position: relative;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 7%;
+}
+
+footer {
+  background: #feeeea;
+  color: black; 
+  text-align: center;
+  padding: 15px;
+  font-size: 0.95rem;
+  border-radius: 0 0 20px 20px;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16/9;
+}
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.back-to-top {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: small;
+}
+
+.back-to-top:hover {
+  background-color: wheat;
+}
+
+
+  </style>
+</head>
+
+
+<body id="top">
+  <div id='wrapper'>
+    <header>
+      <div class="logo-hover"></div>
+      <h1 class="neon-sign">Quiet Power</h1>
+    </header>
+    <div class= 'hero-image'></div>
+
+    <nav>
+      <ul>
+        <li><a href='Index.html'>Home</a>
+        <li><a href='QuietPower.html'>Quiet Power</a>
+            <ul>
+            <li><a href='QuietPower.html'>Quiet Power</a></li>
+            <li><a href='HiddenKnowledge.html'>Hidden knowledge</a></li>
+
+            </ul>
+        </li>
+        <li>
+          <a href='Search Toolkit.html'>Search Toolkit</a>
+
+        </li>
+        <li>
+          <a href='Community Role.html'>Community Role</a>
+
+        </li>
+        <li>
+          <a href='Library Role.html'>Library Role</a>
+
+        </li>
+        <li>
+          <a href='Trends.html'>Trends</a>
+
+        </li>
+      </ul>
+    </nav>
+
+
+    <div class="content-row">
+      <div class="left-column">
+      <h2>Quiet Power in Library Systems</h2>
+        <div class="img-box">
+          <img src="images/power of books.webp" alt="picture of 'the power of books'">
+        </div>
+      <p><em><strong>Organizing knowledge through selection and description</strong> </em></p>
+      <p>Collection development determines which materials enter a library. Classification places those materials within a conceptual structure. 
+        Subject headings provide approved terms for discovery. 
+        Metadata connects records to names, topics, formats, and communities.</p>
+      <p>These activities are necessary. A catalogue cannot function without some form of organization. Yet organization is never purely technical. Drabinski (2013) argues that classification systems should be understood as ideological texts rather than neutral containers. Categories are created within particular historical conditions. They reflect the language available to cataloguers and the institutions that authorize that language. <em><u>No final correction can make a classification system permanently neutral.</u></em>
+        </p> 
+      <p>The controversy surrounding the Library of Congress subject heading “Illegal Aliens” provides a clear example. Lo (2019) documents how a subject term can carry political meaning while appearing to be a routine cataloguing decision. Users who reject an official term may still need to search with it because records were created under that heading. The catalogue places a burden on the user: understand the system’s language or risk missing relevant material.
+        </p> 
+      <p>
+        Bias can also appear in classification structure. Howard and Knowlton (2018) found problems in Library of Congress systems used for African American Studies and LGBTQIA Studies. Materials may be dispersed across categories or placed under language that does not reflect current community understanding. Browsing a shelf can therefore reproduce the assumptions built into the classification scheme.
+      </p>
+     <p>
+      <em>These examples show why library power can be quiet.</em>
+     </p>
+     <p>
+      A library does not need to ban a book to limit its discoverability. The material may be present but described poorly. It may be placed where users do not expect to find it. Its subject language may represent an outsider’s perspective. The result is a form of partial access.
+     </p>
+      <p> </p>
+    <h2>Realize it, respond to it</h2>
+          <p> content here</p>
+      <p>content here, insert imag in between within scroll animation</p>
+    </div>
+
+    <div class="right-column">
+      <h2>Recommended Reading List</h2>
+        <ul class="links">
+          <li><a href='https://orl.bc.ca/2026/04/16/what-the-research-says-libraries-matter-more-than-ever/'>Libraries Matter More Than Ever</a></li>
+          <li><a href='https://bslw.com/impact-of-inclusivity-in-library-catalog/'>The Impact of Inclusivity in the Library Catalog</a></li>
+        </ul>
+
+        <h2>Link to Videos</h2>
+        <ul class="links">
+          <li><a href='https://www.youtube.com/watch?v=Rtfp_0-3hiQ'>What is "Quiet Power?"</a></li>
+          <li><a href='https://www.youtube.com/watch?v=5ldhxLqn6VE'>How Books Shape Who We Become</a></li>
+          <li><a href='https://www.youtube.com/watch?v=D9hde90uJfs'>How books shape minds and societies</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <small>Beyond the First Page - 9170 Final Project | Zihan Xin | zxin28@uwo.ca </small>
+      <a href="#top" class="back-to-top">BACK TO TOP</a>
+
+    </footer>
+
+  </div>
+</body>
+</html>

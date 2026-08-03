@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Digital Literacy Guide</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f1e7;
+  background-image: url(images/Information\ background.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto;
+  color: #1f1f1f;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  border: #d8c3a5;
+  border-radius: 5px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#wrapper {
+  width: 1100px;
+  margin: 20px auto;
+  background-color: white;
+  border: 1px solid #d0d0d0;
+  border-radius: 20px 20px 20px 20px;
+}
+
+header {
+    position: relative;
+    background-image: url(images/maple-fork-logo-design-canadian-restaurant-logo-red-maple-leaf-with-fork-and-spon-free-vector.jpg);
+    background-position: left;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 2% 3% 1%;
+    background-color: white;
+}
+
+header:hover {
+  color: orange;
+  font-weight: bold;
+  transition: 0.7s;
+  background-image: url(images/shining\ maple\ logo.png);
+}
+
+.neon-sign {
+  font-size: 300%;
+  font-weight: bold;
+  text-shadow: 0 0 5px wheat, 0019px wheat, 0020px wheat, 0040px wheat;
+  animation: flicker 1.5s infinite;
+}
+@keyframes flicker {
+  0% {opacity: 1; text-shadow: 0 0 5px wheat, 0019px wheat, 0020px wheat, 0040px wheat;}
+  50% {opacity: 0.8; text-shadow: none;}
+  60% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+  70% {opacity: 0.5; text-shadow: none;}
+  80% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+  100% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+}
+
+
+.logo-hover {
+  
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 120px;
+  cursor: pointer;
+}
+
+header h1 {
+  margin: 0 0 2%;
+  font-family: 'Playwrite IE', cursive;
+  font-weight: 300;
+  font-size: 300%;
+}
+
+header p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+nav {
+  background: #feeeea;
+  border-top: 1px solid #feeeea;
+  border-bottom: 1px solid feeeea;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  text-align: center;
+}
+
+nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #feeeea;
+  border: none;
+  text-align: center;
+  z-index: 10;
+}
+
+nav li:hover ul,
+nav li:focus-within ul {
+  display: block;
+}
+
+nav ul li a {
+  display: block;
+  text-align: center;
+  background-color: 3d3d3d;
+  color: black;
+  padding: 12px 20px; 
+
+  border-radius: 10px;
+  width: 180px;
+  transition: 0.2s;
+}
+
+nav > ul > li {
+  display: inline-block;
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 14px 18px;
+  text-decoration: none;
+}
+
+nav li:hover > a,
+nav li:focus-within > a,
+nav a[aria-current='page'] {
+  background-color: azure;
+}
+
+
+#content {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.content-row {
+  display: flex;
+  gap: 0px;
+  align-items: stretch;
+  background-color: whitesmoke;
+}
+
+.left-column {
+  width: 800px;
+  padding-left: 100px;
+  padding-right: 30px;
+  background-image: url(images/beautiful-color-ui-gradients-backgrounds-roseanna.png);
+  background-repeat: repeat-y ;
+  background-size: contain;
+}
+
+.right-column{
+  width: 300px;
+  background: #feeeea;
+  padding: 30px 28px;
+  box-sizing: border-box;
+  border-left: 5px solid #feeeea;
+  border-radius: 0 0 14px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.right-column .links li a {
+  display: inline-block;
+  padding: 4px 6px;
+  transition: 0.3s;
+}
+
+.right-column .links li a:hover {
+  background-color: #dcdcdc;
+  border-radius: 5px;
+  padding-left: 10px;
+  text-decoration: underline;
+}
+
+aside,
+main {
+  display: table-cell;
+  vertical-align: top;
+}
+
+aside {
+  width: 170px;
+  background: #c9c9c9;
+  padding: 26px 18px;
+}
+
+
+main {
+  width: 660px;
+  padding: 28px 40px 34px;
+  background: #efefef;
+}
+
+h2,
+h3 {
+  font-family: 'Quicksand', Georgia, serif;
+  font-weight: 500;
+  color: #000;
+}
+
+main h2 {
+  font-family: 'Quicksand';
+  margin-top: 4px;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+main h3 {
+  font-size: 1.6rem;
+  margin-top: 28px;
+}
+
+aside h3 {
+  font-size: 1.1rem;
+  margin: 6px 0 12px;
+}
+
+ul.links {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+ul.links li {
+  margin-bottom: 10px;
+}
+
+ul.links li a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul.links li a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.img-box {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 280px;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  display: block;
+  position: relative;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 5%;
+}
+
+footer {
+  background: #feeeea;
+  color: black; 
+  text-align: center;
+  padding: 15px;
+  font-size: 0.95rem;
+  border-radius: 0 0 20px 20px;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16/9;
+}
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 5%;
+}
+
+.back-to-top {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: small;
+}
+
+.back-to-top:hover {
+  background-color: wheat;
+}
+
+
+  </style>
+</head>
+
+
+<body id="top">
+  <div id='wrapper'>
+    <header>
+      <div class="logo-hover"></div>
+      <h1 class="neon-sign">Beyond the First Page</h1>
+    </header>
+    <div class= 'hero-image'></div>
+
+    <nav>
+      <ul>
+        <li><a href='Index.html'>Home</a>
+        <li><a href='QuietPower.html'>Quiet Power</a>
+            <ul>
+            <li><a href='QuietPower.html'>Quiet Power</a></li>
+            <li><a href='Hidden Knowledge.html'>Hidden knowledge</a></li>
+            </ul>
+        </li>
+        <li>
+          <a href='Search Toolkit.html'>Search Toolkit</a>
+
+        </li>
+        <li>
+          <a href='Community Role.html'>Community Role</a>
+
+        </li>
+        <li>
+          <a href='Library Role.html'>Library Role</a>
+
+        </li>
+        <li>
+          <a href='Trends.html'>Trends</a>
+
+        </li>
+      </ul>
+    </nav>
+
+
+    <div class="content-row">
+      <div class="left-column">
+      <h2>Quiet Power, Algorithm, and Marginalized Knowledge</h2>
+      <p>
+          Toronto is one of the most multicultural food cities in the world. From local street snacks to elegant dining rooms,
+          the city offers a wide range of tastes, traditions, and culinary experiences.
+        </p>
+        
+      <p>
+        This website introduces food culture in Toronto through cookbook ideas, Michelin restaurants, street vendors,
+          and popular restaurants for visitors and local food lovers.
+      </p>
+      <p style="font-size: 12px;">How to choose your news? Here is the guide</p>
+
+      <div class="video-container">
+      <iframe width="450" height="300" src="https://www.youtube.com/embed/q-Y-z6HmRgI?si=7o7tbdjOT7xX3dpg" 
+      title="YouTube video player" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+      </div>
+      <p><strong>Toront Is Especially Diverse in Foods</strong></p>
+      <p><em>Toronto’s map is more than a geographic layout,</em></p>
+      <p>content requires here</p>
+      <div class="img-box">
+      <img src="images/information literacy poster.png" alt="Information literacy skill poster">
+      </div>
+      <p><strong>Toront Is Especially Diverse in Foods</strong></p>
+      <p><em>Toronto’s map is more than a geographic layout,</em></p>
+      <p>content requires here</p>
+
+      
+    </div>
+
+    <div class="right-column">
+      <h2>Recommended Reading List</h2>
+        <ul class="links">
+          <li><a href='https://www.amazon.ca/Eat-Like-Local-Toronto-Canada/dp/B0DMFBD88D/ref=sr_1_3?crid=3622ZQWCJJT7N&dib=eyJ2IjoiMSJ9.OBcQ7gOM5D6r--JZAccVN-IWY9CUItILAWsoCy8IzEd-dI4wQvnFbwfojmJjUW1iN-BibAxqVhyDCLZEdPIX95ieoADE0sDLW3prHwip8ZSS0OEYhJ64MWwmjGt89XwMLZFF1whV1LC_FJrmzo0C8Wc6lEhkacj4lJP7pttaMNFKSLmGfbNKETQTOWM0DG5NFEn85DT2w_ISV3vggBcI8Ug2op3-nkyzFaF_RpYaR90A0ch46xQlC028sGldR38t6baDua5CjsGve2K0g8hUJpoXw3FaJxe1NPWGVhDDwFA.9tF219syd-t1yHrwmAf6MmKuM2JMQLcV-U6AejKfc2U&dib_tag=se&keywords=Toronto+street+food&qid=1775271973&sprefix=toronto+street+food%2Caps%2C123&sr=8-3'>Eat Like a Local- Toronto: Toronto Canada Food Guide</a></li>
+          <li><a href='https://www.amazon.ca/Edible-City-Torontos-Food-Farm/dp/1552452190/ref=sr_1_2?crid=3OW6F244UA8E3&dib=eyJ2IjoiMSJ9.mARzE9fRBnEnvE5Bw6aEwhAVSnRsW9JegOEF51WWulWNaOVngqjSAAdEg-64my94rSN4a6oXwlZH_bvwRsPneebBqwiLBAa2nB-Vsbr18BqVaE0ORvpnWs4UaC2-v-ZGfQD1AwxkiaSY23FuoDueCDcOkdY44NU7oCx-YPFTiPk8QHXhzeDW0LLcRaE3vAGu77cd4HzopA9kleCjGlOGeOU6fBi8SU6C8gtyoiL5zVF0OvV5JZ3yqo29u9BRihzc02tFveK__OPcnwK3nyBfrf4IwObvDqW0Ldww74gRLvE.I7HpZ-mLGKrAf0WxKeEqY3DQNGGvmnwO5qxjMEsSS84&dib_tag=se&keywords=Toronto+food&qid=1775272021&sprefix=toronto+food%2Caps%2C158&sr=8-2'>The Edible City: Toronto's Food from Farm to Fork</a></li>
+          <li><a href='https://www.amazon.ca/Toronto-Food-Guide-2018-Recommended/dp/1987404610/ref=sr_1_4?crid=3OW6F244UA8E3&dib=eyJ2IjoiMSJ9.mARzE9fRBnEnvE5Bw6aEwhAVSnRsW9JegOEF51WWulWNaOVngqjSAAdEg-64my94rSN4a6oXwlZH_bvwRsPneebBqwiLBAa2nB-Vsbr18BqVaE0ORvpnWs4UaC2-v-ZGfQD1AwxkiaSY23FuoDueCDcOkdY44NU7oCx-YPFTiPk8QHXhzeDW0LLcRaE3vAGu77cd4HzopA9kleCjGlOGeOU6fBi8SU6C8gtyoiL5zVF0OvV5JZ3yqo29u9BRihzc02tFveK__OPcnwK3nyBfrf4IwObvDqW0Ldww74gRLvE.I7HpZ-mLGKrAf0WxKeEqY3DQNGGvmnwO5qxjMEsSS84&dib_tag=se&keywords=Toronto+food&qid=1775272021&sprefix=toronto+food%2Caps%2C158&sr=8-4'>Toronto Food Guide 2018</a></li>
+          <li><a href='https://ocul-uwo.primo.exlibrisgroup.com/discovery/fulldisplay?docid=cdi_proquest_miscellaneous_2524277715&context=PC&vid=01OCUL_UWO:UWO_DEFAULT&lang=en&search_scope=OCULDiscoveryNetwork&adaptor=Primo%20Central&tab=OCULDiscoveryNetwork&query=any,contains,culinary%20history%20of%20Canadian%20immigrants&offset=0'>Culinary infrastructure in Toronto</a></li>
+          <li><a href='https://typebooks.ca/products/9781668002650?variant=44928551321832'>The Depanneur Cookbook</a></li>
+        </ul>
+
+        <h2>Link to Videos</h2>
+        <ul class="links">
+          <li><a href='https://www.youtube.com/watch?v=ztRaIQ5FNzM'>Toronto Street Food Tour</a></li>
+          <li><a href='https://www.youtube.com/watch?v=g4hiF5axjPc'>Top Restaurants to Visit</a></li>
+          <li><a href='https://www.youtube.com/shorts/0QUqmJuVtVI'>Michelin Dining Experience</a></li>
+          <li><a href='https://www.youtube.com/watch?v=qMQrnopaxD0'>Best Food Markets in Toronto</a></li>
+          <li><a href='https://www.youtube.com/watch?v=LefJ9uE3W_U'>Toronto's old recipe</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <small>The Toronto Food Passport - HTML Project | Zihan Xin | zxin28@uwo.ca </small>
+      <a href="#top" class="back-to-top">BACK TO TOP</a>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f1e7;
+  background-image: url(images/global-cuisine-1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  color: #1f1f1f;
+}
+
+/* ===== WRAPPER ===== */
+#wrapper {
+  width: 1100px;
+  margin: 30px auto;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ===== HEADER ===== */
+header {
+  position: relative;
+  text-align: center;
+  padding: 30px 20px;
+  background: white;
+  transition: 0.3s;
+  background-image: url(images/beautiful-color-ui-gradients-backgrounds-roseanna.png);
+}
+
+header:hover {
+  transform: translateY(-3px);
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Hanalei', cursive;
+  font-size: 300%;
+  transition: 0.3s;
+}
+
+header h1:hover {
+  color: #c8a97e;
+  letter-spacing: 2px;
+}
+
+/* LOGO HOVER */
+.logo-hover {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 180px;
+  height: 100px;
+  background-image: url(images/maple-fork-logo-design-canadian-restaurant-logo-red-maple-leaf-with-fork-and-spon-free-vector.jpg);
+  background-size: cover;
+  transition: 0.4s;
+}
+
+.logo-hover:hover {
+  transform: scale(1.2) rotate(-2deg);
+  filter: brightness(1.1);
+}
+
+/* ===== NAV ===== */
+nav {
+  background: #d8c3a5;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav > ul > li {
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 14px 22px;
+  transition: 0.3s;
+  border-radius: 8px;
+}
+
+/* NAV HOVER EFFECT */
+nav li:hover > a {
+  background: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* DROPDOWN */
+nav li ul {
+  display: none;
+  position: absolute;
+  background: white;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+nav li:hover ul {
+  display: block;
+}
+
+nav li ul li a {
+  padding: 10px;
+}
+
+nav li ul li a:hover {
+  background: #f3f3f3;
+  padding-left: 15px;
+}
+
+/* ===== 3 COLUMN LAYOUT ===== */
+.content-row {
+  display: flex;
+  background: whitesmoke;
+}
+
+/* LEFT */
+.left-column {
+  width: 20%;
+  padding: 20px;
+  background: #eaeaea;
+  transition: 0.3s;
+}
+
+.left-column:hover {
+  background: #e0e0e0;
+}
+
+/* MIDDLE (MAIN) */
+.middle-column {
+  width: 55%;
+  padding: 30px 40px;
+  background: white;
+  transition: 0.3s;
+}
+
+.middle-column:hover {
+  transform: scale(1.01);
+}
+
+/* RIGHT */
+.right-column {
+  width: 25%;
+  padding: 30px;
+  background: rgba(255,255,255,0.9);
+  border-left: 3px solid #c8a97e;
+  transition: 0.3s;
+}
+
+.right-column:hover {
+  background: white;
+}
+
+/* ===== HEADINGS ===== */
+h2 {
+  font-family: 'Quicksand';
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+h3 {
+  font-family: 'Quicksand';
+}
+
+/* ===== LINKS (RIGHT COLUMN) ===== */
+.links li {
+  margin-bottom: 10px;
+}
+
+.links li a {
+  display: inline-block;
+  padding: 5px 8px;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.links li a:hover {
+  background: #dcdcdc;
+  padding-left: 12px;
+  text-decoration: underline;
+}
+
+/* ===== VIDEO ===== */
+.video-container {
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ===== IMAGE BOX (FANCY CARD) ===== */
+.img-box {
+  width: 100%;
+  height: 180px;
+  background: #ccc;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.img-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #d8c3a5;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}

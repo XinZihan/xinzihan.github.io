@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Library Role</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+IE:wght@100..400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f6f1e7;
+  background-image: url(images/Information\ background.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto;
+  color: #1f1f1f;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  border: #d8c3a5;
+  border-radius: 5px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#wrapper {
+  width: 1100px;
+  margin: 20px auto;
+  background-color: white;
+  border: 1px solid #d0d0d0;
+  border-radius: 20px 20px 20px 20px;
+}
+
+header {
+    position: relative;
+    background-image: url(images/maple-fork-logo-design-canadian-restaurant-logo-red-maple-leaf-with-fork-and-spon-free-vector.jpg);
+    background-position: left;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 2% 3% 1%;
+    background-color: white;
+}
+
+header:hover {
+  color: orange;
+  font-weight: bold;
+  transition: 0.7s;
+  background-image: url(images/shining\ maple\ logo.png);
+}
+
+.neon-sign {
+  font-size: 300%;
+  font-weight: bold;
+  text-shadow: 0 0 5px wheat, 0019px wheat, 0020px wheat, 0040px wheat;
+  animation: flicker 1.5s infinite;
+}
+@keyframes flicker {
+  0% {opacity: 1; text-shadow: 0 0 5px wheat, 0019px wheat, 0020px wheat, 0040px wheat;}
+  50% {opacity: 0.8; text-shadow: none;}
+  60% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+  70% {opacity: 0.5; text-shadow: none;}
+  80% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+  100% {opacity: 1; text-shadow: 0 0 5px wheat, 0 0 10px wheat, 0 0 20px wheat, 0 0 40px wheat;}
+}
+
+
+.logo-hover {
+  
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 120px;
+  cursor: pointer;
+}
+
+header h1 {
+  margin: 0 0 2%;
+  font-family: 'Playwrite IE', cursive;
+  font-weight: 300;
+  font-size: 300%;
+}
+
+header p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+nav {
+  background: #feeeea;
+  border-top: 1px solid #feeeea;
+  border-bottom: 1px solid feeeea;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  text-align: center;
+}
+
+nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #feeeea;
+  border: none;
+  text-align: center;
+  z-index: 10;
+}
+
+nav li:hover ul,
+nav li:focus-within ul {
+  display: block;
+}
+
+nav ul li a {
+  display: block;
+  text-align: center;
+  background-color: 3d3d3d;
+  color: black;
+  padding: 12px 20px; 
+
+  border-radius: 10px;
+  width: 180px;
+  transition: 0.2s;
+}
+
+nav > ul > li {
+  display: inline-block;
+  position: relative;
+}
+
+nav a {
+  display: block;
+  padding: 14px 18px;
+  text-decoration: none;
+}
+
+nav li:hover > a,
+nav li:focus-within > a,
+nav a[aria-current='page'] {
+  background-color: azure;
+}
+
+
+#content {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.content-row {
+  display: flex;
+  gap: 0px;
+  align-items: stretch;
+  background-color: whitesmoke;
+}
+
+.left-column {
+  width: 800px;
+  padding-left: 100px;
+  padding-right: 30px;
+  background-image: url(images/beautiful-color-ui-gradients-backgrounds-roseanna.png);
+  background-repeat: repeat-y ;
+  background-size: contain;
+}
+
+.right-column{
+  width: 300px;
+  background: #feeeea;
+  padding: 30px 28px;
+  box-sizing: border-box;
+  border-left: 5px solid #feeeea;
+  border-radius: 0 0 14px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.right-column .links li a {
+  display: inline-block;
+  padding: 4px 6px;
+  transition: 0.3s;
+}
+
+.right-column .links li a:hover {
+  background-color: #dcdcdc;
+  border-radius: 5px;
+  padding-left: 10px;
+  text-decoration: underline;
+}
+
+aside,
+main {
+  display: table-cell;
+  vertical-align: top;
+}
+
+aside {
+  width: 170px;
+  background: #c9c9c9;
+  padding: 26px 18px;
+}
+
+
+main {
+  width: 660px;
+  padding: 28px 40px 34px;
+  background: #efefef;
+}
+
+h2,
+h3 {
+  font-family: 'Quicksand', Georgia, serif;
+  font-weight: 500;
+  color: #000;
+}
+
+main h2 {
+  font-family: 'Quicksand';
+  margin-top: 4px;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+main h3 {
+  font-size: 1.6rem;
+  margin-top: 28px;
+}
+
+aside h3 {
+  font-size: 1.1rem;
+  margin: 6px 0 12px;
+}
+
+ul.links {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+ul.links li {
+  margin-bottom: 10px;
+}
+
+ul.links li a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul.links li a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.img-box {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 280px;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
+  display: block;
+  position: relative;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+footer {
+  background: #feeeea;
+  color: black; 
+  text-align: center;
+  padding: 15px;
+  font-size: 0.95rem;
+  border-radius: 0 0 20px 20px;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16/9;
+}
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.back-to-top {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  color: black;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: small;
+}
+
+.back-to-top:hover {
+  background-color: wheat;
+}
+
+
+  </style>
+</head>
+<body id="top">
+
+  <div id="wrapper">
+
+    <header>
+      <div class="logo-hover"></div>
+      <h1 class="neon-sign">Library Role</h1>
+    </header>
+
+
+    <nav aria-label="Main navigation">
+      <ul>
+
+        <li>
+          <a href="Index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="QuietPower.html">Quiet Power</a>
+
+          <ul>
+            <li>
+              <a href="QuietPower.html">Quiet Power</a>
+            </li>
+
+            <li>
+              <a href="Hidden Knowledge.html">Hidden Knowledge</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="Search Toolkit.html">Search Toolkit</a>
+        </li>
+
+        <li>
+          <a href="Community Role.html">Community Role</a>
+        </li>
+
+        <li>
+          <a href="Library Role.html" aria-current="page">
+            Library Role
+          </a>
+        </li>
+
+        <li>
+          <a href="Trends.html">Trends</a>
+        </li>
+
+      </ul>
+    </nav>
+
+
+    <div class="content-row">
+
+      <div class="left-column">
+
+        <h2>Libraries as Counter-Power</h2>
+        <div class="img-box"> <img src="images/library as counter power.jpg" alt="people gathering in library">
+        </div>
+        <h3>
+          Libraries are not separate from the information systems discussed in this
+          project. 
+        </h3>
+
+        <p>
+          While a library cannot create a perfectly neutral information environment.
+          However, it can make the organization of information more visible. It can
+          also give you more than one pathway to knowledge.
+        </p>
+
+        <p>
+          <strong>Libraries can explain how discovery systems work.</strong>
+          You may ask a librarian why catalogue results appear in a particular order,
+          which subject headings are being used, or why one database produces different
+          results from another.
+        </p>
+        <p>
+          Library instruction should move beyond showing you where to type keywords.
+          It can help you compare recognize biased terminology and
+          identify information that may be missing. You may also learn when to search
+          through a catalogue, academic database, government website, or
+          community organization.
+        </p>
+
+        <p>
+          <strong>Libraries can improve description.</strong>
+          Subject headings and catalogue records may contain outdated language (Yes, DDC and LCC).
+          Libraries can add alternative terms, explanatory notes, or local descriptions
+          that help you find resources through more respectful language.
+        </p>
+
+        </p>
+
+        <p>
+          <strong>Libraries can work with communities.</strong>
+          Community partnership may help a library understand which materials are
+          missing from its collection. It may also help the library design programs,
+          research guides, and archival projects that reflect local priorities.
+        </p>
+
+        <p>
+          You should expect this work to involve communities directly. Libraries
+          should not collect community knowledge only to strengthen their own
+          collections. Communities may need control over how materials are described,
+          preserved, displayed, or restricted.
+        </p>
+        <div class="img-box"> <img src="images/NTFT_ExplainingActivities6.web_.jpg" alt="childrens sitting in library">
+        </div>
+        <p>
+          <strong>Libraries can preserve vulnerable information.</strong>
+          Local newspapers, newsletters, independent websites, and community records
+          may disappear when organizations close or digital platforms change. With
+          permission, libraries can help preserve these materials and maintain their
+          context.
+        </p>
+
+        <p>
+          Preservation should not become surveillance. A library does not need to
+          collect every public post or personal interaction. It should consider whether
+          collecting the information creates enough benefit to justify the possible
+          harm.
+        </p>
+
+        <p>
+          <strong>Libraries can support multilingual and accessible discovery.</strong>
+          You may need information in a community language or an accessible format.
+          Libraries can provide multilingual collections and assistance with digital resources.
+        </p>
+
+        <p>
+          Accessibility is not limited to entering a library building. You should also
+          be able to understand the website, use the catalogue, or receive information in a format that meets your needs.
+        </p>
+
+        <p>
+          <strong>Libraries cares about your privacy!!</strong>
+          Searches about health, age, immigration, discrimination,or gender
+          topics may be sensitive. Libraries do not collect your 
+          search histories or personal details. They can also teach you how 
+          cookies, and personalized ranking influence online discovery.
+        </p>
+
+        <h2>Not sure what to ask❔ No problem ❗</h2> 
+        <h3>You do not need to understand every database or search algorithm
+          by yourself. You may ask library staff:</h3>
+
+        <ol class="response-list">
+
+          <li>
+            <p>
+              Can you help me search this topic using more than one information system?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Are there community-created or local sources related to this topic?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Which subject terms or historical terms might help me find more material?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Is this information available in another language or accessible format?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Can you help me evaluate what may be missing from my results?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              What privacy options are available while I conduct this search?
+            </p>
+          </li>
+
+        </ol>
+
+      </div>
+
+
+      <div class="right-column">
+
+        <h2>Avaliable Library Resources</h2>
+        <div class="img-box"> <img src="images/librarian-can-do-it-all_129009653-converted.jpg" alt="cartoon librarian">
+        </div>
+        <ul class="links">
+
+          <li>
+            <a
+              href="https://tpl.ca/using-the-library/computer-services/digital-innovation-services/digital-innovation-hubs/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Digital Innovation Hubs</strong><br>
+              <small>
+                Digital-learning programs
+                at Toronto Public Library.
+              </small>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://tpl.ca/using-the-library/new-to-canada/toronto/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Library Settlement Partnerships</strong><br>
+              <small>
+                Free settlement assistance for newcomers through Toronto
+                Public Library branches.
+              </small>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://tpl.ca/using-the-library/services/book-a-librarian/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Book a Librarian at TPL</strong><br>
+              <small>
+                Personalized help with research, library tools, and community
+                resources.
+              </small>
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="https://www.vpl.ca/programs/creative-residencies/storyteller"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Indigenous Storyteller in Residence</strong><br>
+              <small>
+                A Vancouver Public Library program supporting Indigenous
+                storytelling and intercultural learning.
+              </small>
+            </a>
+          </li>
+<li>
+            <a
+              href="https://www.vpl.ca/about/working-together"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Working Together Toolkit</strong><br>
+              <small>
+                A Canadian resource for developing more inclusive and
+                community-led library services.
+              </small>
+            </a>
+          </li>
+        </ul>
+        
+      </div>
+
+    </div>
+
+
+    <footer>
+
+      <small>
+        Beyond the First Page — LIS 9170 Final Project |
+        Zihan Xin | zxin28@uwo.ca
+      </small>
+
+      <a href="#top" class="back-to-top">
+        BACK TO TOP
+      </a>
+
+    </footer>
+
+  </div>
+
+</body>
